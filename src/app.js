@@ -39,13 +39,10 @@ const CAFE_LIST = [
 	}
 ]
 
-class App extends React.Component {
+class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="section section-content section-header">
-					<div className="logo">Raf, please</div>
-				</div>
 				<div className="section section-content section-list">
 					<CafePreviewList cafes={CAFE_LIST} cities={CITY_LIST} />
 				</div>
@@ -69,12 +66,13 @@ class Cafe extends React.Component {
 	}
 }
 
-//TODO: rename cafe → place
-
 render(
   <Router>
 		<div>
-	    <Route exact path="/" component={App} />
+			<div className="section section-content section-header">
+				<Link to="/" className="logo">Raf, please</Link>
+			</div>
+	    <Route exact path="/" component={Home} />
 	    <Route path="/cafe" component={Cafe} />
 		</div>
   </Router>,
