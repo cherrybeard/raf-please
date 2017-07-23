@@ -8,6 +8,7 @@ var BUILD_DIR = path.resolve(__dirname, 'dist');
 var config = {
 	entry: APP_DIR + '/app.js',
 	devServer: {
+    historyApiFallback: true,
 		contentBase: BUILD_DIR
 	},
 	plugins: [
@@ -16,7 +17,8 @@ var config = {
 	],
 	output: {
 		filename: 'bundle.js',
-		path: BUILD_DIR
+		path: BUILD_DIR,
+    publicPath: '/'
 	},
 	module: {
 		rules: [

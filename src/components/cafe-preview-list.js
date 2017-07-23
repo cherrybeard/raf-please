@@ -1,7 +1,6 @@
 import React from 'react';
 var CafePreview = require('./cafe-preview.js').CafePreview;
 
-
 class CafePreviewList extends React.Component {
 	constructor(props) {
     super(props);
@@ -47,14 +46,16 @@ class CafePreviewList extends React.Component {
 		)
 
 		return (
-			<div className="cafe-preview-list">
-				<div className="cafe-filter">
-					{this.cityList}
+			<div className="section section-content section-list">
+				<div className="cafe-preview-list">
+					<div className="cafe-filter">
+						{this.cityList}
+					</div>
+					<div className="cafe-list">
+						{this.cafeList}
+					</div>
 				</div>
-				<div className="cafe-list">
-					{this.cafeList}
-				</div>
-			</div>
+		</div>
 		)
 	}
 }
