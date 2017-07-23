@@ -2,7 +2,7 @@ import './styles/app.sass';
 import React from 'react';
 import {render} from 'react-dom';
 
-var CafePreview = require('./components/cafe-preview.js').CafePreview;
+var CafePreviewList = require('./components/cafe-preview-list.js').CafePreviewList;
 
 const CITY_LIST = {
 	tomsk: {
@@ -34,31 +34,6 @@ const CAFE_LIST = [
 	}
 ]
 
-class CafePreviewList extends React.Component {
-	constructor(props) {
-    super(props);
-		this.cafeList = this.props.cafes.map((cafe) =>
-			<CafePreview key={cafe.name} title={cafe.title} city={CITY_LIST[cafe.city].title} name={cafe.name} />
-		)
-  }
-
-	render() {
-		return (
-			<div className="cafe-preview-list">
-				<div className="cafe-filter">
-					<button className="active">Все города</button>
-					<button>Новосибирск</button>
-					<button>Томск</button>
-					<button>Омск</button>
-				</div>
-				<div className="cafe-list">
-					{this.cafeList}
-				</div>
-			</div>
-		)
-	}
-}
-
 class App extends React.Component {
 	render() {
 		return (
@@ -67,7 +42,7 @@ class App extends React.Component {
 					<div className="logo">Raf, please</div>
 				</div>
 				<div className="section section-content section-list">
-					<CafePreviewList cafes={CAFE_LIST}/>
+					<CafePreviewList cafes={CAFE_LIST} cities={CITY_LIST} />
 				</div>
 				<div className="section section-content section-footer">
 					<div className="description">
