@@ -7,8 +7,8 @@ import {
   Link
 } from 'react-router-dom';
 
-var CafePreviewList = require('./components/cafe-preview-list.js').CafePreviewList;
-var Cafe = require('./components/cafe.js').Cafe;
+var PlacePreviewList = require('./components/cafe-preview-list.js').CafePreviewList;
+var Place = require('./components/cafe.js').Cafe;
 
 const CITY_LIST = {
 	tomsk: {
@@ -22,7 +22,7 @@ const CITY_LIST = {
 	}
 }
 
-const CAFE_LIST = [
+const PLACE_LIST = [
 	{
 		name: "endorphin",
 		city: "tomsk",
@@ -47,8 +47,8 @@ render(
 				<Link to="/" className="logo">Raf, please</Link>
 			</div>
 
-	    <Route exact path="/" render={props => <CafePreviewList cafes={CAFE_LIST} cities={CITY_LIST} {...props} />} />
-	    <Route path="/cafe/:name" component={Cafe} />
+	    <Route exact path="/" render={props => <PlacePreviewList cafes={PLACE_LIST} cities={CITY_LIST} {...props} />} />
+	    <Route path="/cafe/:name" component={Place} />
 
 			<div className="section section-content section-footer">
 				<div className="description">
