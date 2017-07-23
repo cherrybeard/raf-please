@@ -60,7 +60,23 @@ class App extends React.Component {
 	}
 }
 
+class Cafe extends React.Component {
+	render() {
+		return (
+			<div className="cafe">
+			</div>
+		)
+	}
+}
+
+//TODO: rename cafe → place
+
 render(
-  <App />,
+  <Router>
+		<div>
+	    <Route exact path="/" component={App} />
+	    <Route path="/cafe" component={Cafe} />
+		</div>
+  </Router>,
   document.getElementById('root')
 );
