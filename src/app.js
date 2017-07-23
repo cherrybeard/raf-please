@@ -46,12 +46,6 @@ class Home extends React.Component {
 				<div className="section section-content section-list">
 					<CafePreviewList cafes={CAFE_LIST} cities={CITY_LIST} />
 				</div>
-				<div className="section section-content section-footer">
-					<div className="description">
-						<p><strong>Raf, please</strong> (Раф, плиз) рассказывает о лучших кафе городов Сибири. Не знаете куда сходить? Надоели старые места? Марина и Стив рассказывают только о тех заведениях, которые им нравятся.</p>
-					</div>
-					<div className="made-by">Pure &amp; Painful</div>
-				</div>
 			</div>
 		);
 	}
@@ -74,6 +68,12 @@ render(
 			</div>
 	    <Route exact path="/" component={Home} />
 	    <Route path="/cafe" component={Cafe} />
+			<div className="section section-content section-footer">
+				<div className="description">
+					<p><strong>Raf, please</strong> (Раф, плиз) рассказывает о лучших кафе городов Сибири. Не знаете куда сходить? Надоели старые места? Марина и Стив рассказывают только о тех заведениях, которые им нравятся.</p>
+				</div>
+				<div className="made-by">Pure &amp; Painful</div>
+			</div>
 		</div>
   </Router>,
   document.getElementById('root')
