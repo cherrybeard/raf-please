@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 
 var CafePreviewList = require('./components/cafe-preview-list.js').CafePreviewList;
+var Cafe = require('./components/cafe.js').Cafe;
 
 const CITY_LIST = {
 	tomsk: {
@@ -39,15 +40,6 @@ const CAFE_LIST = [
 	}
 ]
 
-class Cafe extends React.Component {
-	render() {
-		return (
-			<div className="cafe">
-			</div>
-		)
-	}
-}
-
 render(
   <Router>
 		<div>
@@ -56,7 +48,7 @@ render(
 			</div>
 
 	    <Route exact path="/" render={props => <CafePreviewList cafes={CAFE_LIST} cities={CITY_LIST} {...props} />} />
-	    <Route path="/cafe" component={Cafe} />
+	    <Route path="/cafe/:name" component={Cafe} />
 
 			<div className="section section-content section-footer">
 				<div className="description">

@@ -1,7 +1,6 @@
 import React from 'react';
 var CafePreview = require('./cafe-preview.js').CafePreview;
 
-
 class CafePreviewList extends React.Component {
 	constructor(props) {
     super(props);
