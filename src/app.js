@@ -39,18 +39,6 @@ const CAFE_LIST = [
 	}
 ]
 
-class Home extends React.Component {
-	render() {
-		return (
-			<div>
-				<div className="section section-content section-list">
-					<CafePreviewList cafes={CAFE_LIST} cities={CITY_LIST} />
-				</div>
-			</div>
-		);
-	}
-}
-
 class Cafe extends React.Component {
 	render() {
 		return (
@@ -66,8 +54,10 @@ render(
 			<div className="section section-content section-header">
 				<Link to="/" className="logo">Raf, please</Link>
 			</div>
-	    <Route exact path="/" component={Home} />
+
+	    <Route exact path="/" render={props => <CafePreviewList cafes={CAFE_LIST} cities={CITY_LIST} {...props} />} />
 	    <Route path="/cafe" component={Cafe} />
+
 			<div className="section section-content section-footer">
 				<div className="description">
 					<p><strong>Raf, please</strong> (Раф, плиз) рассказывает о лучших кафе городов Сибири. Не знаете куда сходить? Надоели старые места? Марина и Стив рассказывают только о тех заведениях, которые им нравятся.</p>
