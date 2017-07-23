@@ -6,13 +6,13 @@ var APP_DIR = path.resolve(__dirname, 'src');
 var BUILD_DIR = path.resolve(__dirname, 'dist');
 
 var config = {
-	entry: APP_DIR + '/index.js',
+	entry: APP_DIR + '/app.js',
 	devServer: {
 		contentBase: BUILD_DIR
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
-		new HtmlWebpackPlugin({ template: APP_DIR + '/templates/pages/index.pug' })
+		new HtmlWebpackPlugin({ template: APP_DIR + '/templates/app.pug' })
 	],
 	output: {
 		filename: 'bundle.js',
