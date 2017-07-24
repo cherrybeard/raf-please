@@ -27,11 +27,11 @@ class PlacePreviewList extends React.Component {
 				return place.city == filter;
 			})
 		}
-		this.placeList = places.map((place) =>
+		var placeList = places.map((place) =>
 			<PlacePreview key={place.name} title={place.title} city={getCityTitle(place.city)} name={place.name} />
 		)
 
-		this.cityList = this.cities.map((city) =>
+		var cityList = this.cities.map((city) =>
 			<button key={city.name} onClick={this.filterCity} name={city.name} className={this.state.filter == city.name ? 'active' : ''}>{city.title}</button>
 		)
 
@@ -39,10 +39,10 @@ class PlacePreviewList extends React.Component {
 			<div className="section section-content section-list">
 				<div className="place-preview-list">
 					<div className="place-filter">
-						{this.cityList}
+						{cityList}
 					</div>
 					<div className="place-list">
-						{this.placeList}
+						{placeList}
 					</div>
 				</div>
 		</div>
