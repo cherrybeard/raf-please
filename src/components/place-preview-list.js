@@ -47,11 +47,11 @@ class PlacePreviewList extends React.Component {
 
 		return (
 			<div className="section section-content section-list">
-				<div className="cafe-preview-list">
-					<div className="cafe-filter">
+				<div className="place-preview-list">
+					<div className="place-filter">
 						{this.cityList}
 					</div>
-					<div className="cafe-list">
+					<div className="place-list">
 						{this.placeList}
 					</div>
 				</div>
