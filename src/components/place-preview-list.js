@@ -29,16 +29,16 @@ class PlacePreviewList extends React.Component {
 	}
 
 	render() {
-		var cafes = this.props.cafes;
+		var places = this.props.places;
 		var filter = this.state.filter;
 
 		if (filter != 'all') {
-			cafes = cafes.filter(function(cafe) {
-				return cafe.city == filter;
+			places = places.filter(function(place) {
+				return place.city == filter;
 			})
 		}
-		this.cafeList = cafes.map((cafe) =>
-			<PlacePreview key={cafe.name} title={cafe.title} city={this.props.cities[cafe.city].title} name={cafe.name} />
+		this.placeList = places.map((place) =>
+			<PlacePreview key={place.name} title={place.title} city={this.props.cities[place.city].title} name={place.name} />
 		)
 
 		this.cityList = this.cityObjList.map((city) =>
@@ -52,7 +52,7 @@ class PlacePreviewList extends React.Component {
 						{this.cityList}
 					</div>
 					<div className="cafe-list">
-						{this.cafeList}
+						{this.placeList}
 					</div>
 				</div>
 		</div>

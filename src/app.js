@@ -47,7 +47,7 @@ render(
 				<Link to="/" className="logo">Raf, please</Link>
 			</div>
 
-	    <Route exact path="/" render={props => <PlacePreviewList cafes={PLACE_LIST} cities={CITY_LIST} {...props} />} />
+	    <Route exact path="/" render={props => <PlacePreviewList places={PLACE_LIST} cities={CITY_LIST} {...props} />} />
 	    <Route path="/place/:name" component={Place} />
 
 			<div className="section section-content section-footer">
