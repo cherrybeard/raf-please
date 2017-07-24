@@ -1,20 +1,23 @@
-const PLACE_LIST = [
-	{
-		name: "endorphin",
-		city: "tomsk",
-		title: "Эндорфин"
+const PLACE_DICTIONARY = {
+	endorphin: {
+		city: 'tomsk',
+		title: 'Эндорфин',
+		address: 'Учебная 2',
+		workingHours: {
+			starts: '10:00',
+			ends: '20:00'
+		},
+		lastUpdate: '4 июля 2017'
 	},
-	{
-		name: "skuratov",
-		city: "omsk",
-		title: "Скуратов"
+	skuratov: {
+		city: 'omsk',
+		title: 'Скуратов'
 	},
-	{
-		name: "blackwood",
-		city: "novosibirsk",
-		title: "Blackwood"
+	blackwood: {
+		city: 'novosibirsk',
+		title: 'Blackwood'
 	}
-]
+}
 
 const CITY_DICTIONARY = {
 	tomsk: {
@@ -28,18 +31,31 @@ const CITY_DICTIONARY = {
 	}
 }
 
-var getPlaceList = function() {
-	return PLACE_LIST
+var getPlaceDictionary = function() {
+	return PLACE_DICTIONARY
+}
+
+var getPlace = function(name) {
+	return getPlaceDictionary()[name]
+}
+
+var getPlaceParam = function(name, param) {
+	return getPlace(name)[param]
 }
 
 var getPlaceShortList = function() {
-	return PLACE_LIST.map(function(place){
-		return {
-			name: place.name,
-			city: place.city,
-			title: place.title
+	var placeList = [];
+
+	for (var name in getPlaceDictionary()) {
+		var place = {
+			name: name,
+			city: getPlaceParam(name, 'city'),
+			title: getPlaceParam(name, 'title')
 		}
-	})
+		placeList.push(place);
+	}
+
+	return placeList
 }
 
 var getCityDictionary = function() {
@@ -57,10 +73,10 @@ var getCityList = function(includeAllCities) {
 		cityList.push(allCitiesButton);
 	}
 
-	for (var key in getCityDictionary()) {
+	for (var name in getCityDictionary()) {
 		var city = {
-			name: key,
-			title: getCityTitle(key)
+			name: name,
+			title: getCityTitle(name)
 		}
 		cityList.push(city);
 	}
