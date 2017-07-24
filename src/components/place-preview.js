@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class CafePreview extends React.Component {
+class PlacePreview extends React.Component {
 	render() {
 		const photoUrl = require("../img/cafe/"+ this.props.name + "/preview.jpg")
 
@@ -17,5 +17,5 @@ class CafePreview extends React.Component {
 }
 
 module.exports = {
-	CafePreview: CafePreview
+	PlacePreview: PlacePreview
 }

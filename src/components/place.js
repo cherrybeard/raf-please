@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Cafe extends React.Component {
+class Place extends React.Component {
 	render() {
 		return (
 			<div className="cafe">{this.props.match.params.name}</div>
@@ -9,5 +9,5 @@ class Cafe extends React.Component {
 }
 
 module.exports = {
-	Cafe: Cafe
+	Place: Place
 }

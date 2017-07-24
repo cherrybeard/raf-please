@@ -7,8 +7,8 @@ import {
   Link
 } from 'react-router-dom';
 
-var PlacePreviewList = require('./components/cafe-preview-list.js').CafePreviewList;
-var Place = require('./components/cafe.js').Cafe;
+var PlacePreviewList = require('./components/place-preview-list.js').PlacePreviewList;
+var Place = require('./components/place.js').Place;
 
 const CITY_LIST = {
 	tomsk: {

@@ -1,7 +1,7 @@
 import React from 'react';
-var CafePreview = require('./cafe-preview.js').CafePreview;
+var PlacePreview = require('./place-preview.js').PlacePreview;
 
-class CafePreviewList extends React.Component {
+class PlacePreviewList extends React.Component {
 	constructor(props) {
     super(props);
 		this.state  = {filter: 'all'};
@@ -38,7 +38,7 @@ class CafePreviewList extends React.Component {
 			})
 		}
 		this.cafeList = cafes.map((cafe) =>
-			<CafePreview key={cafe.name} title={cafe.title} city={this.props.cities[cafe.city].title} name={cafe.name} />
+			<PlacePreview key={cafe.name} title={cafe.title} city={this.props.cities[cafe.city].title} name={cafe.name} />
 		)
 
 		this.cityList = this.cityObjList.map((city) =>
@@ -61,5 +61,5 @@ class CafePreviewList extends React.Component {
 }
 
 module.exports = {
-	CafePreviewList: CafePreviewList
+	PlacePreviewList: PlacePreviewList
 }
