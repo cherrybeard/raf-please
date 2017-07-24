@@ -1,8 +1,8 @@
 import React from 'react';
 var PlacePreview = require('./place-preview.js').PlacePreview;
 
-var getPlaceList = require('./storage.js').getPlaceList;
-var getCityList = require('./storage.js').getCityList;
+var getPlaces = require('./storage.js').getPlaceShortList;
+var getCities = require('./storage.js').getCityList;
 var getCityTitle = require('./storage.js').getCityTitle;
 
 class PlacePreviewList extends React.Component {
@@ -10,7 +10,7 @@ class PlacePreviewList extends React.Component {
     super(props);
 		this.state  = {filter: 'all'};
 		this.filterCity = this.filterCity.bind(this);
-		this.cities = getCityList(true);
+		this.cities = getCities(true);
   }
 
 	filterCity(e) {
@@ -19,7 +19,7 @@ class PlacePreviewList extends React.Component {
 	}
 
 	render() {
-		var places = getPlaceList();
+		var places = getPlaces();
 		var filter = this.state.filter;
 
 		if (filter != 'all') {

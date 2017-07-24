@@ -32,6 +32,16 @@ var getPlaceList = function() {
 	return PLACE_LIST
 }
 
+var getPlaceShortList = function() {
+	return PLACE_LIST.map(function(place){
+		return {
+			name: place.name,
+			city: place.city,
+			title: place.title
+		}
+	})
+}
+
 var getCityDictionary = function() {
 	return CITY_DICTIONARY
 }
@@ -63,7 +73,7 @@ var getCityTitle = function(cityName) {
 }
 
 module.exports = {
-		getPlaceList: getPlaceList,
+		getPlaceShortList: getPlaceShortList,
 		getCityDictionary: getCityDictionary,
 		getCityList: getCityList,
 		getCityTitle: getCityTitle
