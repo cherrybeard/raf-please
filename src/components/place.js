@@ -2,7 +2,7 @@ import React from 'react';
 
 var getPlaceParam = require('./storage.js').getPlaceParam;
 var Mention = require('./place/mention.js').Mention;
-var Dishes = require('./place/dishes.js').Dishes;
+var DishList = require('./place/dishes.js').DishList;
 
 class Place extends React.Component {
 	constructor(props) {
@@ -47,7 +47,7 @@ class Place extends React.Component {
 
 					<div className="tags">{tagList}</div>
 
-					<Dishes dishes={this.getParam('dishes')} place={this.name} />
+					<DishList dishes={this.getParam('dishes')} place={this.name} />
 
 					<div className="mentions">
 						<Mention name="steven" title="Стив" mention={this.getParam('mentions').steven} />

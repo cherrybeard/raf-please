@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Dishes extends React.Component {
+class DishList extends React.Component {
 
 	render() {
 		const placeName = this.props.place;
@@ -30,5 +30,5 @@ class Dishes extends React.Component {
 }
 
 module.exports = {
-	Dishes: Dishes
+	DishList: DishList
 }
