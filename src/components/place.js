@@ -25,7 +25,7 @@ class Place extends React.Component {
 		return (
 			<div className="place">
 
-				<header className="section section-content">
+				<header className="section section-content place-header">
 					<div className="header-primary">
 						<div className="title">
 							<h1>{this.getParam('title')}</h1>
@@ -41,19 +41,15 @@ class Place extends React.Component {
 					</div>
 				</header>
 
-				<div className="section cover-image" style={{ backgroundImage: `url(${coverPhotoUrl})` }}></div>
+				<div className="section place-cover-image" style={{ backgroundImage: `url(${coverPhotoUrl})` }}></div>
 
 				<article className="place-description section section-content">
-
 					<div className="tags">{tagList}</div>
-
 					<DishList dishes={this.getParam('dishes')} place={this.name} />
-
 					<div className="mentions">
 						<Mention name="steven" title="Стив" mention={this.getParam('mentions').steven} />
 						<Mention name="marina" title="Марина" mention={this.getParam('mentions').marina} />
 					</div>
-
 				</article>
 			</div>
 		)
