@@ -4,10 +4,11 @@ const PLACE_DICTIONARY = {
 		title: 'Эндорфин',
 		address: 'Учебная 2',
 		workingHours: {
-			starts: '10:00',
-			ends: '20:00'
+			start: '10:00',
+			end: '20:00'
 		},
-		lastUpdate: '4 июля 2017'
+		lastUpdate: '4 июля 2017',
+		gisLink: 'https://2gis.ru/tomsk/query/ЭНDОРФИН%2C%20сеть%20микрокофеен/firm/70000001023564244?queryState=center%2F84.942545%2C56.464132%2Fzoom%2F16'
 	},
 	skuratov: {
 		city: 'omsk',
@@ -44,6 +45,10 @@ var getPlaceParam = function(name, param) {
 	switch (param) {
 		case 'cityName':
 			value = getCityTitle(getPlaceParam(name, 'city'));
+			break;
+		case 'workingHoursString':
+			var workingHours = getPlaceParam(name, 'workingHours');
+			value = workingHours.start + " – " + workingHours.end;
 			break;
 		default:
 			value = getPlace(name)[param];
@@ -98,6 +103,7 @@ var getCityTitle = function(cityName) {
 
 module.exports = {
 		getPlaceShortList: getPlaceShortList,
+		getPlaceParam: getPlaceParam,
 		getCityDictionary: getCityDictionary,
 		getCityList: getCityList,
 		getCityTitle: getCityTitle

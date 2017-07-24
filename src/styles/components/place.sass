@@ -1,0 +1,45 @@
+.place
+	.header-primary
+		display: flex
+		justify-content: space-between
+		align-items: baseline
+		padding-top: 24px
+
+		h1
+			font-size: 56px
+			font-weight: 600
+			color: white
+
+		.info
+			color: #eee
+			display: flex
+
+			.address
+				margin-right: 32px
+
+	.header-secondary
+		display: flex
+		justify-content: space-between
+		align-items: baseline
+		color: #666
+		font-size: 14px
+		padding-top: 12px
+		padding-bottom: 28px
+
+		.gis-link
+			display: inline-block
+			border-bottom: 1px solid #444
+			padding-bottom: 3px
+
+			&:hover,
+			&:focus
+				color: #ccc
+				border-bottom-color: rgba($color-active, 0.8)
+				transition: color 0.3s, border-color 0.3s
+
+	.cover-image
+		background:
+			position: center
+			repeat: no-repeat
+			size: cover
+		height: 720px
