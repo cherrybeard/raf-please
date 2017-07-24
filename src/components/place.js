@@ -2,6 +2,7 @@ import React from 'react';
 
 var getPlaceParam = require('./storage.js').getPlaceParam;
 var Mention = require('./place/mention.js').Mention;
+var Dishes = require('./place/dishes.js').Dishes;
 
 class Place extends React.Component {
 	constructor(props) {
@@ -14,26 +15,7 @@ class Place extends React.Component {
 	}
 
 	render() {
-		const coverPhotoUrl = require("../img/place/"+ this.name + "/cover.jpg")
-		const placeName = this.name;
-
- 		const dishes = this.getParam('dishes');
-		const dishList = dishes.map( function(dish) {
-			var photoUrl = require("../img/place/"+ placeName + "/dishes/" + dish.name + ".jpg")
-
-			return (
-				<div className="dish" key={dish.name}>
-					<div className="photo">
-						<img src={photoUrl} alt={dish.title} />
-					</div>
-					<div className="description">
-						<h4 className="title">{dish.title}, <span className="price">{dish.price}</span></h4>
-						<p>{dish.text}</p>
-					</div>
-				</div>
-			)
-			}
-		);
+		const coverPhotoUrl = require("../img/place/"+ this.name + "/cover.jpg");
 
 		var tags = this.getParam('tags');
 		var tagList = tags.map((tag) =>
@@ -65,7 +47,7 @@ class Place extends React.Component {
 
 					<div className="tags">{tagList}</div>
 
-					<div className="dishes">{dishList}</div>
+					<Dishes dishes={this.getParam('dishes')} place={this.name} />
 
 					<div className="mentions">
 						<Mention name="steven" title="Стив" mention={this.getParam('mentions').steven} />
