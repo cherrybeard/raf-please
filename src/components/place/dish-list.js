@@ -1,30 +1,19 @@
 import React from 'react';
 
-class DishList extends React.Component {
+var Dish = require('./dish-list/dish.js').Dish;
 
-	render() {
+class DishList extends React.Component {
+	constructor(props){
+		super(props);
 		const placeName = this.props.place;
 
-		const dishList = this.props.dishes.map( function(dish) {
-			var photoUrl = require("../../img/place/"+ placeName + "/dishes/" + dish.name + ".jpg")
+		this.dishList = this.props.dishes.map(function(dish) {
+			return ( <Dish key={dish.name} dish={dish} placeName={placeName} /> )
+		});
+	}
 
-			return (
-				<div className="dish" key={dish.name}>
-					<div className="photo">
-						<img src={photoUrl} alt={dish.title} />
-					</div>
-					<div className="description">
-						<h4 className="title">{dish.title}, <span className="price">{dish.price}</span></h4>
-						<p>{dish.text}</p>
-					</div>
-				</div>
-			)
-			}
-		);
-
-		return (
-			<div className="dishes">{dishList}</div>
-		)
+	render() {
+		return ( <div className="dishes">{this.dishList}</div> )
 	}
 
 }
