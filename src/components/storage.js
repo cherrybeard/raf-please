@@ -40,7 +40,15 @@ var getPlace = function(name) {
 }
 
 var getPlaceParam = function(name, param) {
-	return getPlace(name)[param]
+	var value;
+	switch (param) {
+		case 'cityName':
+			value = getCityTitle(getPlaceParam(name, 'city'));
+			break;
+		default:
+			value = getPlace(name)[param];
+	}
+	return value
 }
 
 var getPlaceShortList = function() {
