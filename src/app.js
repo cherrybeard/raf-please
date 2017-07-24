@@ -48,7 +48,7 @@ render(
 			</div>
 
 	    <Route exact path="/" render={props => <PlacePreviewList cafes={PLACE_LIST} cities={CITY_LIST} {...props} />} />
-	    <Route path="/cafe/:name" component={Place} />
+	    <Route path="/place/:name" component={Place} />
 
 			<div className="section section-content section-footer">
 				<div className="description">

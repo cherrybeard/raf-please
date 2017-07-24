@@ -6,7 +6,7 @@ class CafePreview extends React.Component {
 		const photoUrl = require("../img/cafe/"+ this.props.name + "/preview.jpg")
 
 		return (
-			<Link to={`/cafe/${this.props.name}`} className="cafe-preview">
+			<Link to={`/place/${this.props.name}`} className="cafe-preview">
 				<div className="photo" style={{ backgroundImage: `url(${photoUrl})` }}></div>
 				<div className="description">
 					<span className="title">{this.props.title}</span>, <span className="city">{this.props.city}</span>
