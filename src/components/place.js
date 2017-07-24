@@ -1,6 +1,7 @@
 import React from 'react';
 
 var getPlaceParam = require('./storage.js').getPlaceParam;
+var Mention = require('./place/mention.js').Mention;
 
 class Place extends React.Component {
 	constructor(props) {
@@ -67,21 +68,8 @@ class Place extends React.Component {
 					<div className="dishes">{dishList}</div>
 
 					<div className="mentions">
-						<div className="mention mention-steven">
-							<div className="photo"></div>
-							<div className="text">
-								<h4 className="name">Стив</h4>
-								<p>{this.getParam('mentions').steven}</p>
-							</div>
-						</div>
-
-						<div className="mention mention-marina">
-							<div className="photo"></div>
-							<div className="text">
-								<h4 className="name">Марина</h4>
-								<p>{this.getParam('mentions').marina}</p>
-							</div>
-						</div>
+						<Mention name="steven" title="Стив" mention={this.getParam('mentions').steven} />
+						<Mention name="marina" title="Марина" mention={this.getParam('mentions').marina} />
 					</div>
 
 				</article>
