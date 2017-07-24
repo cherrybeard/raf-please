@@ -8,9 +8,8 @@ class DishList extends React.Component {
 	}
 
 	render() {
-		const placeName = this.props.place;
-		const dishList = this.props.dishes.map(function(dish) {
-			return ( <Dish key={dish.name} dish={dish} placeName={placeName} /> )
+		const dishList = this.props.dishes.map((dish) => {
+			return ( <Dish key={dish.name} dish={dish} placeName={this.props.place} /> )
 		});
 
 		return ( <div className="dishes">{dishList}</div> )

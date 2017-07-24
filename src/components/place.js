@@ -3,6 +3,7 @@ import React from 'react';
 var getPlaceParam = require('./storage.js').getPlaceParam;
 var Mention = require('./place/mention.js').Mention;
 var DishList = require('./place/dish-list.js').DishList;
+var PlaceHeader = require('./place/header.js').PlaceHeader;
 
 class Place extends React.Component {
 	constructor(props) {
@@ -17,32 +18,21 @@ class Place extends React.Component {
 	render() {
 		const coverPhotoUrl = require("../img/place/"+ this.name + "/cover.jpg");
 
-		var tags = this.getParam('tags');
-		var tagList = tags.map((tag) =>
+		const tags = this.getParam('tags');
+		const tagList = tags.map((tag) =>
 			<span key={tag} className="tag">{tag}</span>
 		);
 
+		const headerInfoKeys = ['title', 'cityName', 'address', 'workingHoursString', 'lastUpdate', 'gisLink']
+		var headerInfo = {}
+		headerInfoKeys.forEach((key) => {
+			headerInfo[key] = this.getParam(key);
+		});
+
 		return (
 			<div className="place">
-
-				<header className="section section-content place-header">
-					<div className="header-primary">
-						<div className="title">
-							<h1>{this.getParam('title')}</h1>
-						</div>
-						<div className="info">
-							<address className="address">{this.getParam('cityName')}, {this.getParam('address')}</address>
-							<div className="working-hours">{this.getParam('workingHoursString')}</div>
-						</div>
-					</div>
-					<div className="header-secondary">
-						<div className="last-update">Последнее обновление: {this.getParam('lastUpdate')}</div>
-						<a className="gis-link" href={this.getParam('gisLink')}>Открыть в 2ГИС</a>
-					</div>
-				</header>
-
+				<PlaceHeader info={headerInfo} />
 				<div className="section place-cover-image" style={{ backgroundImage: `url(${coverPhotoUrl})` }}></div>
-
 				<article className="place-description section section-content">
 					<div className="tags">{tagList}</div>
 					<DishList dishes={this.getParam('dishes')} place={this.name} />
