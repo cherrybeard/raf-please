@@ -1,11 +1,11 @@
 import React from 'react';
 
-var getPlaceParam = require('./storage.js').getPlaceParam;
+const getPlaceParam = require('./storage/places.js').getPlaceParam;
 
-var Mention = require('./place/mention.js').Mention;
-var DishList = require('./place/dish-list.js').DishList;
-var PlaceHeader = require('./place/header.js').PlaceHeader;
-var PlaceContent = require('./place/content.js').PlaceContent;
+const Mention = require('./place/mention.js').Mention;
+const DishList = require('./place/dish-list.js').DishList;
+const PlaceHeader = require('./place/header.js').PlaceHeader;
+const PlaceContent = require('./place/content.js').PlaceContent;
 
 class Place extends React.Component {
 	constructor(props) {

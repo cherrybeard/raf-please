@@ -1,9 +1,9 @@
 import React from 'react';
-var PlacePreview = require('./place-preview.js').PlacePreview;
+const PlacePreview = require('./place-preview.js').PlacePreview;
 
-var getPlaces = require('./storage.js').getPlaceShortList;
-var getCities = require('./storage.js').getCityList;
-var getCityTitle = require('./storage.js').getCityTitle;
+const getPlaces = require('./storage/places.js').getPlaceShortList;
+const getCities = require('./storage/cities.js').getCityList;
+const getCityTitle = require('./storage/cities.js').getCityTitle;
 
 class PlacePreviewList extends React.Component {
 	constructor(props) {

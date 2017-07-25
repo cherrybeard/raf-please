@@ -7,8 +7,8 @@ import {
   Link
 } from 'react-router-dom';
 
-var PlacePreviewList = require('./components/place-preview-list.js').PlacePreviewList;
-var Place = require('./components/place.js').Place;
+const PlacePreviewList = require('./components/place-preview-list.js').PlacePreviewList;
+const Place = require('./components/place.js').Place;
 
 render(
   <Router>
