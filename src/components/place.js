@@ -1,9 +1,11 @@
 import React from 'react';
 
 var getPlaceParam = require('./storage.js').getPlaceParam;
+
 var Mention = require('./place/mention.js').Mention;
 var DishList = require('./place/dish-list.js').DishList;
 var PlaceHeader = require('./place/header.js').PlaceHeader;
+var PlaceContent = require('./place/content.js').PlaceContent;
 
 class Place extends React.Component {
 	constructor(props) {
@@ -35,6 +37,7 @@ class Place extends React.Component {
 				<div className="section place-cover-image" style={{ backgroundImage: `url(${coverPhotoUrl})` }}></div>
 				<article className="place-description section section-content">
 					<div className="tags">{tagList}</div>
+					<PlaceContent content={this.getParam('page')} />
 					<DishList dishes={this.getParam('dishes')} place={this.name} />
 					<div className="mentions">
 						<Mention name="steven" title="Стив" mention={this.getParam('mentions').steven} />
