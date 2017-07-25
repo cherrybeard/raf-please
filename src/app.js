@@ -10,36 +10,6 @@ import {
 var PlacePreviewList = require('./components/place-preview-list.js').PlacePreviewList;
 var Place = require('./components/place.js').Place;
 
-const CITY_LIST = {
-	tomsk: {
-		title: 'Томск'
-	},
-	novosibirsk: {
-		title: 'Новосибирск'
-	},
-	omsk: {
-		title: 'Омск'
-	}
-}
-
-const PLACE_LIST = [
-	{
-		name: "endorphin",
-		city: "tomsk",
-		title: "Эндорфин"
-	},
-	{
-		name: "skuratov",
-		city: "omsk",
-		title: "Скуратов"
-	},
-	{
-		name: "blackwood",
-		city: "novosibirsk",
-		title: "Blackwood"
-	}
-]
-
 render(
   <Router>
 		<div>
@@ -47,7 +17,7 @@ render(
 				<Link to="/" className="logo">Raf, please</Link>
 			</div>
 
-	    <Route exact path="/" render={props => <PlacePreviewList places={PLACE_LIST} cities={CITY_LIST} {...props} />} />
+	    <Route exact path="/" component={PlacePreviewList} />
 	    <Route path="/place/:name" component={Place} />
 
 			<div className="section section-content section-footer">

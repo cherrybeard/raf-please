@@ -1,0 +1,24 @@
+%photo-description-left
+	padding-left: 18px
+	position: relative
+
+	&::before
+		$width: 5px
+		$border-transparent: $width solid transparent
+
+		content: ''
+		position: absolute
+		left: 0
+		top: 6px
+		width: 0
+		height: 0
+		border:
+			right: $width solid #888
+			top: $border-transparent
+			bottom: $border-transparent
+
+%photo-description-top
+	@extend %photo-description-left
+
+	&::before
+		transform: rotate(90deg)

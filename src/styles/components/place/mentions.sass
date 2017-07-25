@@ -1,0 +1,33 @@
+%place-mentions
+	display: flex
+	justify-content: space-between
+	padding-top: 140px
+
+	.mention
+		display: flex
+		width: 470px
+
+		.photo
+			$size: 140px
+
+			width: $size
+			height: $size
+			border-radius: 50%
+			flex-shrink: 0
+			margin-right: 24px
+			background:
+				position: center
+				repeat: no-repeat
+				size: cover
+
+		.name
+			@extend %header-small
+			margin-bottom: 10px
+
+	.mention-steven
+		.photo
+			background-image: url('../img/mention/steven.jpg')
+
+	.mention-marina
+		.photo
+			background-image: url('../img/mention/marina.jpg')
