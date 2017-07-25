@@ -1,11 +1,21 @@
+@import content/intro
+
 %place-content
+	.left-photo
+		&:not(:last-child)
+			margin-bottom: 80px
+
 	.intro
-		font-size: 24px
-		color: #ccc
-		margin-bottom: 120px
+		@extend %place-content-intro
+		&:not(:last-child)
+			margin-bottom: 120px
 
-		p
-			width: $content-width
+	.left-photo
+		display: flex
 
-		p + p
-			margin-top: 16px
+		.photo
+			max-width: $content-width
+
+		.description
+			@extend %photo-description-left
+			margin-left: 20px

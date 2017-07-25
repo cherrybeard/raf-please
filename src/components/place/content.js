@@ -22,6 +22,14 @@ class PlaceContent extends React.Component {
 				case 'intro':
 					blockContent = block.text.map((paragraphText, index) => { return <p key={index}>{paragraphText}</p> });
 					break;
+
+				case 'left-photo':
+					let photoUrl = require("../../img/place/"+ this.props.place + "/photos/" + block.photo +".jpg");
+					blockContent = [
+						( <img className="photo" src={photoUrl} alt={block.text} key="1"/> ),
+						( <div className="description" key="2">{block.text}</div> )
+					]
+					break;
 			}
 			return ( <div key={key} className={className}>{blockContent}</div> )
 		});

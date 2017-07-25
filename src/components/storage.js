@@ -43,7 +43,7 @@ const PLACE_DICTIONARY = {
 				]
 			},
 			{
-				type: 'photo-left',
+				type: 'left-photo',
 				photo: 'places-to-sit',
 				text: 'В кафе довольно мало мест, и все они не сильно удобны для долгой работы.'
 			},
