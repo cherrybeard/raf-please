@@ -1,21 +1,24 @@
 @import content/intro
+@import content/left-photo
+@import content/two-photos
 
 %place-content
-	.left-photo
-		&:not(:last-child)
-			margin-bottom: 80px
-
 	.intro
 		@extend %place-content-intro
 		&:not(:last-child)
 			margin-bottom: 120px
 
+	.left-photo,
+	.two-photos
+		&:not(:last-child)
+			margin-bottom: 80px
+
 	.left-photo
-		display: flex
+		@extend %place-content-left-photo
 
+	.two-photos
+		@extend %place-content-two-photos
+
+	.full-width-photo
 		.photo
-			max-width: $content-width
-
-		.description
-			@extend %photo-description-left
-			margin-left: 20px
+			max-width: 100%

@@ -1,0 +1,23 @@
+%place-content-two-photos
+	display: flex
+	justify-content: space-between
+
+	.two-photos-left
+		max-width: 500px
+
+	.two-photos-right
+		width: 440px
+
+	.photo
+		max-width: 100%
+
+	.description-top,
+	.description-left
+		max-width: 360px
+		margin-top: 35px
+
+	.description-top
+		@extend %photo-description-top
+
+	.description-left
+		@extend %photo-description-left

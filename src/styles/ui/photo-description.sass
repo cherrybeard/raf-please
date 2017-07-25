@@ -1,4 +1,4 @@
-%photo-description
+%photo-description-left
 	padding-left: 18px
 	position: relative
 
@@ -17,8 +17,8 @@
 			top: $border-transparent
 			bottom: $border-transparent
 
+%photo-description-top
+	@extend %photo-description-left
 
-
-%photo-description-left,
-%photo-description-up
-	@extend %photo-description
+	&::before
+		transform: rotate(90deg)

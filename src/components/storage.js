@@ -48,7 +48,7 @@ const PLACE_DICTIONARY = {
 				text: 'В кафе довольно мало мест, и все они не сильно удобны для долгой работы.'
 			},
 			{
-				type: 'two-photo',
+				type: 'two-photos',
 				photos: [
 					{
 						photo: 'stairs',
@@ -62,7 +62,8 @@ const PLACE_DICTIONARY = {
 			},
 			{
 				type: 'full-width-photo',
-				photo: 'coffee-machine'
+				photo: 'coffee-machine',
+				text: 'Гигантская красная кофемашина сияет на всю кофейню.'
 			}
 		]
 	},
