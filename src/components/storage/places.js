@@ -1,19 +1,9 @@
-var PLACE_ENDORPHIN = require('./storage/places/endorphin.js').ENDORPHIN;
+const getCityTitle = require('./cities.js').getCityTitle;
+
+const PLACE_ENDORPHIN = require('./places/endorphin.js').ENDORPHIN;
 
 const PLACES = {
 	endorphin: PLACE_ENDORPHIN
-}
-
-const CITIES = {
-	tomsk: {
-		title: 'Томск'
-	},
-	novosibirsk: {
-		title: 'Новосибирск'
-	},
-	omsk: {
-		title: 'Омск'
-	}
 }
 
 var getPlaceDictionary = function() {
@@ -55,40 +45,7 @@ var getPlaceShortList = function() {
 	return placeList
 }
 
-var getCityDictionary = function() {
-	return CITIES
-}
-
-var getCityList = function(includeAllCities) {
-	var cityList = [];
-
-	if (includeAllCities) {
-		var allCitiesButton = {
-			name: 'all',
-			title: 'Все города'
-		}
-		cityList.push(allCitiesButton);
-	}
-
-	for (var name in getCityDictionary()) {
-		var city = {
-			name: name,
-			title: getCityTitle(name)
-		}
-		cityList.push(city);
-	}
-
-	return cityList
-}
-
-var getCityTitle = function(cityName) {
-	return getCityDictionary()[cityName].title
-}
-
 module.exports = {
 		getPlaceShortList: getPlaceShortList,
-		getPlaceParam: getPlaceParam,
-		getCityDictionary: getCityDictionary,
-		getCityList: getCityList,
-		getCityTitle: getCityTitle
+		getPlaceParam: getPlaceParam
 }
