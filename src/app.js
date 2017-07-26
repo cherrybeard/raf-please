@@ -10,7 +10,7 @@ import {
 const PlacePreviewList = require('./components/place-preview-list.js').PlacePreviewList;
 const Place = require('./components/place.js').Place;
 
-const publicPath = '/rafplease';
+var PRODUCTION = true;
 
 render(
   <Router basename={PRODUCTION ? "/rafplease" : ""}>
