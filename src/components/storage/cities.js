@@ -4,9 +4,6 @@ const CITIES = {
 	},
 	novosibirsk: {
 		title: 'Новосибирск'
-	},
-	omsk: {
-		title: 'Омск'
 	}
 }
 
