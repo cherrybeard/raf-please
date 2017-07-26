@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -13,7 +14,10 @@ const config = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
-		new HtmlWebpackPlugin({ template: APP_DIR + '/templates/app.pug' })
+		new HtmlWebpackPlugin({ template: APP_DIR + '/templates/app.pug' }),
+		new webpack.DefinePlugin({
+			'PRODUCTION': JSON.stringify(false)
+		}),
 	],
 	output: {
 		filename: 'bundle.js',
