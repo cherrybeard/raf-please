@@ -1,11 +1,14 @@
-const path = require('path');
+const BaseConfig = require('./webpack.base.js');
+
 const webpack = require('webpack');
 const Merge = require('webpack-merge');
-const CommonConfig = require('./webpack.config.js');
 
-const BUILD_DIR = path.resolve(__dirname, 'dist');
+const SERVER_SUBDIRECTORY = '/rafplease';
 
 const config = {
+	output: {
+		publicPath: (SERVER_SUBDIRECTORY + '/')
+	},
 	plugins: [
 		new webpack.LoaderOptionsPlugin({
 			minimize: true,
@@ -15,7 +18,7 @@ const config = {
 			'process.env': {
 				'NODE_ENV': JSON.stringify('production')
 			},
-			'PRODUCTION': JSON.stringify(true)
+			ROOT_DIRECTORY: JSON.stringify(SERVER_SUBDIRECTORY)
 		}),
 		new webpack.optimize.UglifyJsPlugin({
 			beautify:false,
@@ -28,12 +31,7 @@ const config = {
 			},
 			comments: false
 		})
-	],
-	output: {
-		filename: 'bundle.js',
-		path: BUILD_DIR,
-    publicPath: '/rafplease/'
-	},
-}
+	]
+};
 
-module.exports = Merge(CommonConfig, config);
+module.exports = Merge(BaseConfig.config, config);
