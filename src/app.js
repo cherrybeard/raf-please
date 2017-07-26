@@ -10,8 +10,10 @@ import {
 const PlacePreviewList = require('./components/place-preview-list.js').PlacePreviewList;
 const Place = require('./components/place.js').Place;
 
+const publicPath = '/rafplease';
+
 render(
-  <Router>
+  <Router basename={PRODUCTION ? "/rafplease" : ""}>
 		<div>
 			<div className="section section-content section-header">
 				<Link to="/" className="logo">Raf, please</Link>
