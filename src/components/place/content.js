@@ -30,7 +30,11 @@ class PlaceContent extends React.Component {
 				case 'left-photo':
 					photoUrl = this.requirePhoto(block.photo);
 					blockContent = [
-						( <img className="photo" src={photoUrl} alt={block.text} key="1" /> ),
+						(
+							<div className="photo" key="1">
+								<img src={photoUrl} alt={block.text} />
+							</div>
+						),
 						( <div className="description" key="2">{block.text}</div> )
 					]
 					break;
@@ -38,7 +42,11 @@ class PlaceContent extends React.Component {
 				case 'two-photos':
 					photoUrls = block.photos.map((photo) => { return this.requirePhoto(photo.photo) });
 					blockContent = [
-						( <img className="two-photos-left" src={photoUrls[0]} alt={block.photos[0].text} key="1" /> ),
+						(
+							<div className="two-photos-left" key="1">
+								<img src={photoUrls[0]} alt={block.photos[0].text} />
+							</div>
+						),
 						(
 							<div className="two-photos-right" key="2">
 								<img className="photo" src={photoUrls[1]} alt={block.photos[1].text} />

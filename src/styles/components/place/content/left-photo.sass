@@ -1,8 +1,13 @@
 %place-content-left-photo
 	display: flex
 
+	img
+		max-width: 100%
+
 	.photo
-		max-width: $content-width
+		width: $content-width
+		flex-shrink: 0
+
 
 	.description
 		@extend %photo-description-left
