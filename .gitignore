@@ -51,3 +51,6 @@ jspm_packages
 
 #Production folder
 /dist
+
+#Assets folder
+/assets
