@@ -18,10 +18,11 @@ const config = {
 			'process.env': {
 				'NODE_ENV': JSON.stringify('production')
 			},
-			ROOT_DIRECTORY: JSON.stringify(SERVER_SUBDIRECTORY)
+			ROOT_DIRECTORY: JSON.stringify(SERVER_SUBDIRECTORY),
+			ASSETS_DIRECTORY: JSON.stringify(SERVER_SUBDIRECTORY+'/assets')
 		}),
 		new webpack.optimize.UglifyJsPlugin({
-			beautify:false,
+			beautify: false,
 			mangle: {
 				screw_ie8: true,
 				keep_fnames: true

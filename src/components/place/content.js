@@ -7,7 +7,7 @@ class PlaceContent extends React.Component {
 	}
 
 	requirePhoto(photo) {
-		return require("../../img/place/"+ this.props.place + "/photos/" + photo +".jpg");
+		return ASSETS_DIRECTORY + '/images/place/'+ this.props.place + "/photos/" + photo +".jpg";
 	}
 
 	render() {
@@ -70,6 +70,4 @@ class PlaceContent extends React.Component {
 
 }
 
-module.exports = {
-	PlaceContent: PlaceContent
-}
+module.exports = PlaceContent;

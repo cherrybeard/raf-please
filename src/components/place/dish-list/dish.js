@@ -4,7 +4,7 @@ class Dish extends React.Component {
 	constructor(props){
 		super(props);
 		this.dish = this.props.dish;
-		this.photoUrl =  require("../../../img/place/"+ this.props.placeName + "/dishes/" + this.dish.name + ".jpg");
+		this.photoUrl = ASSETS_DIRECTORY + '/images/place/'+ this.props.placeName + "/dishes/" + this.dish.name + ".jpg";
 	}
 
 	render() {
@@ -23,6 +23,4 @@ class Dish extends React.Component {
 
 }
 
-module.exports = {
-	Dish: Dish
-}
+module.exports = Dish;

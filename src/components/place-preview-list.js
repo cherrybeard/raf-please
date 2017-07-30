@@ -1,5 +1,5 @@
 import React from 'react';
-const PlacePreview = require('./place-preview.js').PlacePreview;
+import PlacePreview from './place-preview-list/place-preview.js';
 
 const getPlaces = require('./storage/places.js').getPlaceShortList;
 const getCities = require('./storage/cities.js').getCityList;
@@ -50,6 +50,4 @@ class PlacePreviewList extends React.Component {
 	}
 }
 
-module.exports = {
-	PlacePreviewList: PlacePreviewList
-}
+module.exports = PlacePreviewList;

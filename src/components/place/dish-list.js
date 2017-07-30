@@ -1,10 +1,10 @@
 import React from 'react';
-
-var Dish = require('./dish-list/dish.js').Dish;
+import Dish from './dish-list/dish.js';
 
 class DishList extends React.Component {
 	constructor(props){
 		super(props);
+		console.log(Dish);
 	}
 
 	render() {
@@ -17,6 +17,4 @@ class DishList extends React.Component {
 
 }
 
-module.exports = {
-	DishList: DishList
-}
+module.exports = DishList;
