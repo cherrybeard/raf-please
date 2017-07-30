@@ -1,11 +1,10 @@
 import React from 'react';
+import DishList from './place/dish-list.js';
+import Mention from './place/mention.js';
+import PlaceHeader from './place/header.js';
+import PlaceContent from './place/content.js';
 
 const getPlaceParam = require('./storage/places.js').getPlaceParam;
-
-const Mention = require('./place/mention.js').Mention;
-const DishList = require('./place/dish-list.js').DishList;
-const PlaceHeader = require('./place/header.js').PlaceHeader;
-const PlaceContent = require('./place/content.js').PlaceContent;
 
 class Place extends React.Component {
 	constructor(props) {
@@ -18,7 +17,7 @@ class Place extends React.Component {
 	}
 
 	render() {
-		const coverPhotoUrl = require("../img/place/"+ this.name + "/cover.jpg");
+		const coverPhotoUrl = ASSETS_DIRECTORY + '/images/place/'+ this.name + "/cover.jpg";
 
 		const tags = this.getParam('tags');
 		const tagList = tags.map((tag) =>
@@ -34,7 +33,7 @@ class Place extends React.Component {
 		return (
 			<div className="place">
 				<PlaceHeader info={headerInfo} />
-				<div className="section place-cover-image" style={{ backgroundImage: `url(${coverPhotoUrl})` }}></div>
+				<div className="section place-cover-image" style={{ backgroundImage: `url('http://cherrybeard.ru/rafplease/assets/images/place/${this.name}/cover.jpg` }}></div>
 				<article className="place-description section section-content">
 					<div className="tags">{tagList}</div>
 					<PlaceContent content={this.getParam('page')} place={this.name} />
@@ -49,6 +48,4 @@ class Place extends React.Component {
 	}
 }
 
-module.exports = {
-	Place: Place
-}
+module.exports = Place;

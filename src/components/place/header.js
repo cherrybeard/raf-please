@@ -28,6 +28,4 @@ class PlaceHeader extends React.Component {
 
 }
 
-module.exports = {
-	PlaceHeader: PlaceHeader
-}
+module.exports = PlaceHeader;

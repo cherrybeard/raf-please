@@ -1,6 +1,5 @@
 const BaseConfig = require('./webpack.base.js');
 
-const path = require('path');
 const webpack = require('webpack');
 const Merge = require('webpack-merge');
 
@@ -12,7 +11,8 @@ const config = {
 	},
 	plugins: [
 		new webpack.DefinePlugin({
-			ROOT_DIRECTORY: JSON.stringify('/')
+			ROOT_DIRECTORY: JSON.stringify('/'),
+			ASSETS_DIRECTORY: JSON.stringify('http://cherrybeard.ru/rafplease/assets')
 		})
 	],
 	devServer: {

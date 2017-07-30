@@ -13,9 +13,7 @@ class Mention extends React.Component {
 			</div>
 		)
 	}
-	
+
 }
 
-module.exports = {
-	Mention: Mention
-}
+module.exports = Mention;

@@ -7,8 +7,8 @@ import {
   Link
 } from 'react-router-dom';
 
-const PlacePreviewList = require('./components/place-preview-list.js').PlacePreviewList;
-const Place = require('./components/place.js').Place;
+import PlacePreviewList from './components/place-preview-list.js';
+import Place from './components/place.js';
 
 render(
   <Router basename={ROOT_DIRECTORY}>
