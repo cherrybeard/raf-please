@@ -2,10 +2,12 @@ const getCityTitle = require('./cities.js').getCityTitle;
 
 const PLACE_ENDORPHIN = require('./places/endorphin.js').ENDORPHIN;
 const PLACE_PITCHII = require('./places/pitchii.js').PITCHII;
+const PLACE_MAKELOVEPIZZA = require('./places/makelovepizza.js').MAKELOVEPIZZA;
 
 const PLACES = {
 	endorphin: PLACE_ENDORPHIN,
 	pitchii: PLACE_PITCHII,
+	makelovepizza: PLACE_MAKELOVEPIZZA
 }
 
 var getPlaceDictionary = function() {
