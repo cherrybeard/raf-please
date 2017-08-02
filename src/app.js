@@ -14,7 +14,7 @@ render(
   <Router basename={ROOT_DIRECTORY}>
 		<div>
 			<div className="section section-content section-header">
-				<Link to="/" className="logo">Raf, please</Link>
+				<Link to="/" className="logo">Раф, плиз!</Link>
 			</div>
 
 	    <Route exact path="/" component={PlacePreviewList} />
