@@ -12,7 +12,7 @@ class PlacePreview extends React.Component {
 			<Link to={`/place/${this.props.name}`} className="place-preview">
 				<div className="photo" style={{ backgroundImage: `url(${this.photoUrl})` }}></div>
 				<div className="description">
-					<span className="title">{this.props.title}</span>, <span className="city">{this.props.city}</span>
+					<span className="title">{this.props.title}</span>
 				</div>
 			</Link>
 		)

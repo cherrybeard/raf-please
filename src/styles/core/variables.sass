@@ -3,4 +3,27 @@ $content-width: 720px
 $section-border: 1px solid #666
 
 $color-active: #f8d11c
-$color-page-bg: #222
+$color-page-bg: white
+
+$font-size-base: 18px
+$font-size-large: 24px
+
+@function rem($px)
+	@return ($px/$font-size-base)*1rem
+
+=respond-to($media)
+	@if $media == large
+		@media only screen and (min-width: 1500px - 1)
+			@content
+
+	@if $media == tablet
+		@media only screen and (max-width: 980px - 1)
+			@content
+
+	@if $media == smartphone
+		@media only screen and (max-width: 720px - 1)
+			@content
+
+	@else
+		@media only screen and (max-width: $media - 1)
+			@content
