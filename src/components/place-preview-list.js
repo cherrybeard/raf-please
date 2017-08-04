@@ -1,5 +1,5 @@
 import React from 'react';
-import PlacePreview from './place-preview-list/place-preview.js';
+import PlacePreview from './place-preview.js';
 
 class PlacePreviewList extends React.Component {
 	render() {
@@ -8,7 +8,7 @@ class PlacePreviewList extends React.Component {
 				<div className="place-preview-list-city">
 					<h2>Новосибирск</h2>
 					<div className="big-place">
-						<PlacePreview title="Blackwood" city="Новосибриск" name="blackwood" />
+						<PlacePreview name="blackwood" />
 					</div>
 				</div>
 			</div>
