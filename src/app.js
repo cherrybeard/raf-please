@@ -7,17 +7,13 @@ import {
   Link
 } from 'react-router-dom';
 
-import PlacePreviewList from './components/place-preview-list.js';
 import Place from './components/place.js';
+import Home from './scenes/home.js'
 
 render(
   <Router basename={ROOT_DIRECTORY}>
 		<div>
-			<div className="section section-content section-header">
-				<Link to="/" className="logo">Раф, плиз!</Link>
-			</div>
-
-	    <Route exact path="/" component={PlacePreviewList} />
+	    <Route exact path="/" component={Home} />
 	    <Route path="/place/:name" component={Place} />
 
 			<div className="section section-content section-footer">
