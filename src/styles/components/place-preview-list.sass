@@ -1,31 +1,15 @@
 .place-preview-list
-	.place-filter
-		margin-bottom: 30px
-
-		button
-			$height: 28px
-			font-size: 14px
-			line-height: $height
-			color: inherit
-			padding: 0 16px
-			border-radius: $height/2
-			background: transparent
-
-			&.active
-				background: $color-active
-				color: #222
-
-	.place-list
-		display: flex
-		flex-direction: row
-		align-items: flex-start
-		justify-content: flex-start
-		flex-wrap: wrap
+	h2
+		@extend %header-large
+		margin-bottom: 40px
 
 	.place-preview
 		width: 48%
-
 		margin-bottom: 40px
 
 		&:nth-child(2n+1)
 			margin-right: 4%
+
+	.big-place
+		.photo
+			padding-top: 600/1000*100%
