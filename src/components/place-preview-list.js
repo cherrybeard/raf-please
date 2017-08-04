@@ -36,7 +36,7 @@ class PlacePreviewList extends React.Component {
 		)
 
 		return (
-			<div className="section section-content section-list">
+			<div>
 				<div className="place-preview-list">
 					<div className="place-filter">
 						{cityList}

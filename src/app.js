@@ -17,9 +17,6 @@ render(
 	    <Route path="/place/:name" component={Place} />
 
 			<div className="section section-content section-footer">
-				<div className="description">
-					<p><strong>Raf, please</strong> (Раф, плиз) рассказывает о лучших кафе городов Сибири. Не знаете куда сходить? Надоели старые места? Марина и Стив рассказывают только о тех заведениях, которые им нравятся.</p>
-				</div>
 				<div className="logo">Раф, плиз!</div>
 			</div>
 		</div>
