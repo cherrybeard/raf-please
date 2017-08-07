@@ -3,13 +3,22 @@
 		@extend %header-large
 		margin-bottom: 40px
 
-	.place-preview
-		width: 48%
+	%place-preview-list-block
 		margin-bottom: 40px
 
-		&:nth-child(2n+1)
-			margin-right: 4%
-
 	.big-place
+		@extend %place-preview-list-block
+
 		.photo
 			padding-top: 600/1000*100%
+
+	.two-places
+		@extend %place-preview-list-block
+		display: flex
+
+		.place-preview
+			width: 48%
+			display: block
+
+			&:first-child
+				margin-right: 4%

@@ -10,6 +10,10 @@ class PlacePreviewList extends React.Component {
 					<div className="big-place">
 						<PlacePreview name="blackwood" />
 					</div>
+					<div className="two-places">
+						<PlacePreview name="barbq" />
+						<PlacePreview name="pitchii" />
+					</div>
 				</div>
 			</div>
 		)
