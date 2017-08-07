@@ -1,10 +1,49 @@
 .place-preview-list
+	%place-preview-list-block
+		margin-bottom: 40px
+
 	h2
 		@extend %header-large
 		margin-bottom: 40px
 
-	%place-preview-list-block
-		margin-bottom: 40px
+	.place-preview-list-city
+		&:not(:first-child)
+			margin-top: 80px
+
+	.place-preview
+		display: block
+
+	.place-preview-list-instagram
+		font:
+			family: $font-secondary
+			size: 36px
+		position: relative
+		padding-top: 200px
+
+		&::before
+			$size: 100px
+
+			content: ''
+			width: $size
+			height: $size
+			position: absolute
+			top: 80px
+			left: 0
+			background: url('../img/instagram.svg') center no-repeat
+				size: cover
+
+		a
+			display: block
+			margin-top: 10px
+			font-size: 26px
+
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
 
 	.big-place
 		@extend %place-preview-list-block
@@ -18,7 +57,18 @@
 
 		.place-preview
 			width: 48%
-			display: block
 
 			&:first-child
 				margin-right: 4%
+
+	.place-on-left
+		@extend %place-preview-list-block
+		display: flex
+
+		.place-preview
+			width: 68%
+			flex-shrink: 0
+			margin-right: 50px
+
+		.photo
+			padding-top: 400/680*100%
