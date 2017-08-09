@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 import ScrollToTop from './components/scroll-to-top.js';
-import Place from './components/place.js';
+import Place from './scenes/place.js';
 import Home from './scenes/home.js'
 
 render(
