@@ -48,4 +48,4 @@ class Place extends React.Component {
 	}
 }
 
-module.exports = Place;
+export default Place;
