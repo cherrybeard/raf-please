@@ -4,7 +4,7 @@ import Mention from './place/mention.js';
 import PlaceHeader from './place/header.js';
 import PlaceContent from './place/content.js';
 
-const getPlaceParam = require('./storage/places.js').getPlaceParam;
+const getPlaceParam = require('../storage/places.js').getPlaceParam;
 
 class Place extends React.Component {
 	constructor(props) {
