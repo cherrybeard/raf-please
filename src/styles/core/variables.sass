@@ -1,7 +1,5 @@
 $content-width: 720px
 
-$section-border: 1px solid #666
-
 $color-active: #f8d11c
 $color-page-bg: white
 
@@ -10,6 +8,8 @@ $font-size-large: 24px
 
 @function rem($px)
 	@return ($px/$font-size-base)*1rem
+
+$content-padding-hrz: rem(70px)
 
 =respond-to($media)
 	@if $media == large

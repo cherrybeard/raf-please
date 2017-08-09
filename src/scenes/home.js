@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PlacePreviewList from '../components/place-preview-list.js';
+import Logo from '../components/logo.js';
 
 class Home extends React.Component {
 	render(){
 		return (
 			<div className="scene-home">
 				<div className="section-header">
-					<Link to="/" className="logo">Раф, плиз!</Link>
+					<Logo />
 				</div>
 				<div className="section-list">
 					<PlacePreviewList />

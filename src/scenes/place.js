@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Logo from '../components/logo.js';
+
 import DishList from './place/dish-list.js';
 import Mention from './place/mention.js';
 import PlaceHeader from './place/header.js';
@@ -34,7 +36,7 @@ class Place extends React.Component {
 
 		return (
 			<div className="place">
-				<Link to="/" className="logo" />
+				<Logo />
 				<div className="section place-cover-image" style={{ backgroundImage: `url('http://cherrybeard.ru/rafplease/assets/images/place/${this.name}/cover.jpg` }}></div>
 				<PlaceHeader info={headerInfo} />
 				<article className="place-description section section-content">

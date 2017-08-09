@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 
 import ScrollToTop from './components/scroll-to-top.js';
+import Logo from './components/logo.js';
 import Place from './scenes/place.js';
 import Home from './scenes/home.js'
 
@@ -18,8 +19,8 @@ render(
 		    <Route exact path="/" component={Home} />
 		    <Route path="/place/:name" component={Place} />
 
-				<div className="section section-content section-footer">
-					<div className="logo">Раф, плиз!</div>
+				<div className="section-footer">
+					<Logo />
 				</div>
 			</div>
 		</ScrollToTop>
