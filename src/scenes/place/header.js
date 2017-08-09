@@ -1,26 +1,26 @@
 import React from 'react';
+import { getPlaceParam } from '../../storage/places.js';
 
 class PlaceHeader extends React.Component {
 	constructor(props){
 		super(props);
-		this.info = this.props.info;
+		this.name = this.props.name;
+	}
+
+	getParam(param) {
+		return getPlaceParam(this.name, param)
 	}
 
 	render() {
 		return (
-			<header className="section section-content place-header">
-				<div className="header-primary">
-					<div className="title">
-						<h1>{this.info.title}</h1>
+			<header className="place-header">
+				<h1 className="title">{this.getParam('title')}</h1>
+				<div className="info">
+					<div className="info-details">
+						<address className="address">{this.getParam('cityName')}, {this.getParam('address')}</address>
+						<div className="working-hours">{this.getParam('workingHoursString')}</div>
 					</div>
-					<div className="info">
-						<address className="address">{this.info.cityName}, {this.info.address}</address>
-						<div className="working-hours">{this.info.workingHoursString}</div>
-					</div>
-				</div>
-				<div className="header-secondary">
-					<div className="last-update">Последнее обновление: {this.info.lastUpdate}</div>
-					<a className="gis-link" href={this.info.gisLink}>Открыть в 2ГИС</a>
+					<a className="gis-link" href={this.getParam('gisLink')}>Открыть в 2ГИС</a>
 				</div>
 			</header>
 		)

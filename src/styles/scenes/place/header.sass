@@ -1,0 +1,26 @@
+%place-header
+	display: flex
+	justify-content: space-between
+
+	.title
+		@extend %header-large
+		line-height: 1
+
+	.info
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+
+	.info-details
+		display: flex
+
+		.address
+			margin-right: 32px
+
+	.gis-link
+		font-size: rem(14px)
+		padding:
+			top: 8px
+			bottom: 2px
+		color: #888
+		border-bottom: 1px solid rgba(#888, 0.2)
