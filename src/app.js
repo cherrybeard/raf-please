@@ -7,26 +7,22 @@ import {
   Link
 } from 'react-router-dom';
 
-import PlacePreviewList from './components/place-preview-list.js';
+import ScrollToTop from './components/scroll-to-top.js';
 import Place from './components/place.js';
+import Home from './scenes/home.js'
 
 render(
   <Router basename={ROOT_DIRECTORY}>
-		<div>
-			<div className="section section-content section-header">
-				<Link to="/" className="logo">Raf, please</Link>
-			</div>
+		<ScrollToTop>
+			<div>
+		    <Route exact path="/" component={Home} />
+		    <Route path="/place/:name" component={Place} />
 
-	    <Route exact path="/" component={PlacePreviewList} />
-	    <Route path="/place/:name" component={Place} />
-
-			<div className="section section-content section-footer">
-				<div className="description">
-					<p><strong>Raf, please</strong> (Раф, плиз) рассказывает о лучших кафе городов Сибири. Не знаете куда сходить? Надоели старые места? Марина и Стив рассказывают только о тех заведениях, которые им нравятся.</p>
+				<div className="section section-content section-footer">
+					<div className="logo">Раф, плиз!</div>
 				</div>
-				<div className="made-by">Pure &amp; Painful</div>
 			</div>
-		</div>
+		</ScrollToTop>
   </Router>,
   document.getElementById('root')
 );

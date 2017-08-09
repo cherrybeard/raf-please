@@ -2,16 +2,20 @@
 @import sections/footer
 @import sections/list
 
+::selection
+	background: $color-active
+
 html
-	$font-size: 18px
-
 	background-color: $color-page-bg
-	color: #aaa
+	color: #444
 	font:
-		family: 'Lato', sans-serif
-		size: $font-size
-	line-height: (22px/$font-size)
+		family: $font-primary
+		size: $font-size-base
+	line-height: (22px/$font-size-base)
 
-.section-content
-	max-width: 1000px
-	margin: auto
+%section-content
+	$padding: rem(70px)
+
+	padding:
+		left: $padding
+		right: $padding

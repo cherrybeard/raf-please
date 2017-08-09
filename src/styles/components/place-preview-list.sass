@@ -1,29 +1,44 @@
+@import place-preview-list/instagram
+
 .place-preview-list
-	.place-filter
-		margin-bottom: 30px
+	%place-preview-list-block
+		margin-bottom: 40px
 
-		button
-			$height: 28px
-			font-size: 14px
-			line-height: $height
-			color: inherit
-			padding: 0 16px
-			border-radius: $height/2
-			background: transparent
+	h2
+		@extend %header-large
+		margin-bottom: 40px
 
-			&.active
-				background: $color-active
-				color: #222
-
-	.place-list
-		display: flex
-		flex-direction: row
-		align-items: flex-start
-		justify-content: flex-start
-		flex-wrap: wrap
+	.place-preview-list-city
+		&:not(:first-child)
+			margin-top: 80px
 
 	.place-preview
-		&:not(:nth-child(3n+1))
-			margin:
-				left: 80px
-				bottom: 40px
+		display: block
+
+	.big-place
+		@extend %place-preview-list-block
+
+		.photo
+			padding-top: 600/1000*100%
+
+	.two-places
+		@extend %place-preview-list-block
+		display: flex
+
+		.place-preview
+			width: 48%
+
+			&:first-child
+				margin-right: 4%
+
+	.place-on-left
+		@extend %place-preview-list-block
+		display: flex
+
+		.place-preview
+			width: 68%
+			flex-shrink: 0
+			margin-right: 50px
+
+		.photo
+			padding-top: 400/680*100%
