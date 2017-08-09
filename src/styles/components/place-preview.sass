@@ -1,21 +1,35 @@
 .place-preview
-	width: rem(480px)
-
 	.photo
 		width: 100%
-		height: rem(340px)
+		padding-top: 340/480*100%
 		background:
-			color: #333
+			color: #eee
 			position: center
 			repeat: no-repeat
 			size: cover
 		position: relative
 
-	.description
-		margin-top: 12px
+	.about
+		$line-height: 18px
+
+		margin-top: 16px
+		display: flex
+
+		.title
+			line-height: $line-height * 2
+
+		.description
+			height: $line-height * 2
+			line-height: $line-height
 
 	.title
 		font:
 			family: $font-secondary
 			size: rem(36px)
 		text-transform: uppercase
+		flex-shrink: 0
+
+	.description
+		margin-left: 10px
+		overflow: hidden
+		font-size: 16px
