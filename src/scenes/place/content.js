@@ -1,68 +1,68 @@
 import React from 'react';
 
+import Mention from '../../components/mention.js';
+import SidePhoto from './content/side-photo.js';
+
 class PlaceContent extends React.Component {
 	constructor(props){
 		super(props);
 		this.content = this.props.content;
 	}
 
-	requirePhoto(photo) {
+	getPhotoUrl(photo) {
 		return ASSETS_DIRECTORY + '/images/place/'+ this.props.place + "/photos/" + photo +".jpg";
 	}
 
 	render() {
-		var placeContent = this.content.map((block) => {
-			var key, className, blockContent, photoUrl, photoUrls;
-
-			if (block.className) {
-				key = block.className;
-				className = block.type + ' ' + block.className;
-			} else {
-				key = block.type;
-				className = block.type;
-			}
+		var placeContent = this.content.map((block, index) => {
+			var blockContent, photoUrl, photoUrls;
 
 			switch (block.type) {
 				case 'intro':
-					blockContent = block.text.map((paragraphText, index) => { return <p key={index}>{paragraphText}</p> });
+					var paragraphList = block.text.map((paragraphText, index) => { return <p key={index}>{paragraphText}</p> });
+					blockContent = <div key={index} className="intro">{paragraphList}</div>;
 					break;
 
 				case 'left-photo':
-					photoUrl = this.requirePhoto(block.photo);
-					blockContent = [
-						(
-							<div className="photo" key="1">
-								<img src={photoUrl} alt={block.text} />
-							</div>
-						),
-						( <div className="description" key="2">{block.text}</div> )
-					]
+					photoUrl = this.getPhotoUrl(block.photo);
+					blockContent = <SidePhoto key={index} align="left" photoUrl={photoUrl} block={block.block} />;
+					break;
+
+				case 'right-photo':
+					photoUrl = this.getPhotoUrl(block.photo);
+					blockContent = <SidePhoto key={index} align="right" photoUrl={photoUrl} block={block.block} />;
 					break;
 
 				case 'two-photos':
-					photoUrls = block.photos.map((photo) => { return this.requirePhoto(photo.photo) });
-					blockContent = [
-						(
+					photoUrls = block.photos.map((photo) => { return this.getPhotoUrl(photo.photo) });
+					blockContent = (
+						<div key={index} className="two-photos">
 							<div className="two-photos-left" key="1">
-								<img src={photoUrls[0]} alt={block.photos[0].text} />
+								<img src={photoUrls[0]} />
 							</div>
-						),
-						(
-							<div className="two-photos-right" key="2">
-								<img className="photo" src={photoUrls[1]} alt={block.photos[1].text} />
-								<div className="description-top">{block.photos[1].text}</div>
-								<div className="description-left">{block.photos[0].text}</div>
-							</div>
-						)
-					]
+								<div className="two-photos-right" key="2">
+									<img className="photo" src={photoUrls[1]} />
+									<div className="description-top">{block.photos[1].text}</div>
+									<div className="description-left">{block.photos[0].text}</div>
+								</div>
+						</div>
+					);
 					break;
 
 				case 'full-width-photo':
-					photoUrl = this.requirePhoto(block.photo);
-					blockContent = <img className="photo" src={photoUrl} alt={block.text} />;
+					photoUrl = this.getPhotoUrl(block.photo);
+					blockContent = (
+						<div key={index} className="full-width-photo">
+							<img className="photo" src={photoUrl} />
+						</div>
+					);
+					break;
+
+				case 'mention':
+					blockContent = <Mention key={index} name={block.name} text={block.text} type="horizontal" />;
 					break;
 			}
-			return ( <div key={key} className={className}>{blockContent}</div> )
+			return blockContent
 		});
 
 		return ( <div className="place-content">{placeContent}</div> )
@@ -70,4 +70,4 @@ class PlaceContent extends React.Component {
 
 }
 
-module.exports = PlaceContent;
+export default PlaceContent

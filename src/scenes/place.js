@@ -5,7 +5,6 @@ import { getPlaceParam } from '../storage/places.js';
 import Logo from '../components/logo.js';
 
 import DishList from './place/dish-list.js';
-import Mention from './place/mention.js';
 import PlaceHeader from './place/header.js';
 import PlaceContent from './place/content.js';
 
@@ -36,10 +35,6 @@ class Place extends React.Component {
 					<div className="tags">{this.tagList}</div>
 					<PlaceContent content={this.getParam('page')} place={this.name} />
 					<DishList dishes={this.getParam('dishes')} place={this.name} />
-					<div className="mentions">
-						<Mention name="steven" title="Стив" mention={this.getParam('mentions').steven} />
-						<Mention name="marina" title="Марина" mention={this.getParam('mentions').marina} />
-					</div>
 				</article>
 			</div>
 		)

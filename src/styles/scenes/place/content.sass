@@ -1,20 +1,32 @@
 @import content/intro
-@import content/left-photo
+@import content/side-photo
 @import content/two-photos
 
-%place-content
+.place-content
 	.intro
 		@extend %place-content-intro
 		&:not(:last-child)
 			margin-bottom: 120px
 
 	.left-photo,
-	.two-photos
+	.right-photo,
+	.two-photos,
+	.mention-horizontal
 		&:not(:last-child)
 			margin-bottom: 80px
 
+	.left-photo,
+	.right-photo
+		@extend %place-content-side-photo
+
 	.left-photo
-		@extend %place-content-left-photo
+		.photo
+			margin-right: $sidebar-margin
+
+	.right-photo
+		.photo
+			order: 1
+			margin-left: $sidebar-margin
 
 	.two-photos
 		@extend %place-content-two-photos
@@ -22,3 +34,6 @@
 	.full-width-photo
 		.photo
 			max-width: 100%
+
+	.mention-horizontal
+		width: $content-width
