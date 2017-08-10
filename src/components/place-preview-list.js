@@ -6,7 +6,7 @@ class PlacePreviewList extends React.Component {
 		return (
 			<div className="place-preview-list">
 				<div className="place-preview-list-city">
-					<h2>Новосибирск</h2>
+					<h2 className="place-preview-list-city-title">Новосибирск</h2>
 					<div className="big-place">
 						<PlacePreview name="blackwood" />
 					</div>
@@ -16,7 +16,7 @@ class PlacePreviewList extends React.Component {
 					</div>
 				</div>
 				<div className="place-preview-list-city">
-					<h2>Томск</h2>
+					<h2 className="place-preview-list-city-title">Томск</h2>
 					<div className="big-place">
 						<PlacePreview name="endorphin" />
 					</div>

@@ -1,0 +1,23 @@
+%place-dishes
+	display: flex
+
+	.dish
+		width: rem(290px)
+
+		&:not(:last-child)
+			margin-right: $sidebar-margin
+
+		img
+			max-width: 100%
+
+	.title
+		@extend %header-small
+		margin:
+			top: 20px
+			bottom: 2px
+
+	.price
+		@extend %header-smallest
+		display: block
+		color: #888
+		margin-bottom: 10px

@@ -1,0 +1,39 @@
+%mention
+	$photo-size: 80px
+	$photo-margin: 24px
+
+	position: relative
+	box-sizing: border-box
+
+	&.mention-horizontal
+		padding-left: $photo-size + $photo-margin
+
+	&.mention-vertical
+		padding-top: $photo-size + $photo-margin
+
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: $photo-size
+		height: $photo-size
+		border-radius: 50%
+		background:
+			position: center
+			repeat: no-repeat
+			size: cover
+
+	.name
+		@extend %header-smallest
+		margin-bottom: 10px
+
+.mention-steven
+	@extend %mention
+	&::before
+		background-image: url('../img/mention/steven.jpg')
+
+.mention-marina
+	@extend %mention
+	&::before
+		background-image: url('../img/mention/marina.jpg')

@@ -3,12 +3,21 @@
 	.section-list
 		@extend %section-content
 
+	.section-header
+		padding:
+			top: 60px
+			bottom: 30px
+
+		.logo
+			width: 100%
+
 	.section-list
 		display: flex
+		padding-top: 30px
 
 	.about-website
-		margin-left: rem(60px)
-		width: rem(240px)
+		margin-left: $sidebar-margin
+		width: $sidebar-width
 		flex-shrink: 0
 
 	.place-preview-list
