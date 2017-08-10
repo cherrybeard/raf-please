@@ -29,6 +29,7 @@ class Place extends React.Component {
 				<article className="place-description">
 					<PlaceContent content={this.getParam('page')} place={this.name} />
 					<DishList dishes={this.getParam('dishes')} place={this.name} />
+					<div className="last-update">Последнее обновление: {this.getParam('lastUpdate')}</div>
 				</article>
 			</div>
 		)
