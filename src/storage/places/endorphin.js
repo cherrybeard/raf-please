@@ -1,4 +1,4 @@
-const ENDORPHIN = {
+const PLACE_ENDORPHIN = {
 	city: 'tomsk',
 	title: 'Эндорфин',
 	address: 'Учебная 2',
@@ -69,7 +69,4 @@ const ENDORPHIN = {
 	]
 }
 
-
-module.exports = {
-	ENDORPHIN: ENDORPHIN
-}
+export default PLACE_ENDORPHIN

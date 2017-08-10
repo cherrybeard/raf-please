@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { getPlaceParam } from '../storage/places.js';
-import Logo from '../components/logo.js';
+import { getPlaceParam } from 'storage/places.js';
+import Logo from 'components/logo.js';
 
 import DishList from './place/dish-list.js';
 import PlaceHeader from './place/header.js';
@@ -36,4 +36,4 @@ class Place extends React.Component {
 	}
 }
 
-export default Place;
+export default Place

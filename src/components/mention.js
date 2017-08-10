@@ -17,4 +17,4 @@ class Mention extends React.Component {
 
 }
 
-export default Mention;
+export default Mention

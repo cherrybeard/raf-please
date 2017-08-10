@@ -1,17 +1,17 @@
-const getCityTitle = require('./cities.js').getCityTitle;
+import { getCityTitle } from 'storage/cities.js';
 
-const PLACE_ENDORPHIN = require('./places/endorphin.js').ENDORPHIN;
-const PLACE_PITCHII = require('./places/pitchii.js').PITCHII;
-const PLACE_MAKELOVEPIZZA = require('./places/makelovepizza.js').MAKELOVEPIZZA;
-const PLACE_BLACKWOOD = require('./places/blackwood.js').BLACKWOOD;
-const PLACE_BARBQ = require('./places/barbq.js').BARBQ;
+import PLACE_ENDORPHIN 			from './places/endorphin.js';
+import PLACE_PITCHII 				from './places/pitchii.js';
+import PLACE_MAKELOVEPIZZA 	from './places/makelovepizza.js';
+import PLACE_BLACKWOOD 			from './places/blackwood.js';
+import PLACE_BARBQ 					from './places/barbq.js';
 
 const PLACES = {
-	endorphin: PLACE_ENDORPHIN,
-	pitchii: PLACE_PITCHII,
-	makelovepizza: PLACE_MAKELOVEPIZZA,
-	blackwood: PLACE_BLACKWOOD,
-	barbq: PLACE_BARBQ
+	endorphin: 			PLACE_ENDORPHIN,
+	pitchii: 				PLACE_PITCHII,
+	makelovepizza: 	PLACE_MAKELOVEPIZZA,
+	blackwood: 			PLACE_BLACKWOOD,
+	barbq: 					PLACE_BARBQ
 }
 
 var getPlaceDictionary = function() {
@@ -53,7 +53,4 @@ var getPlaceShortList = function() {
 	return placeList
 }
 
-module.exports = {
-		getPlaceShortList: getPlaceShortList,
-		getPlaceParam: getPlaceParam
-}
+export { getPlaceShortList, getPlaceParam };

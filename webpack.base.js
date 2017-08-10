@@ -15,6 +15,9 @@ const config = {
 		new CleanWebpackPlugin([BUILD_DIR]),
 		new HtmlWebpackPlugin({ template: APP_DIR + '/templates/app.pug' })
 	],
+	resolve: {
+		modules: [APP_DIR, 'node_modules']
+	},
 	module: {
 		rules: [
 			{

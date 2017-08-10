@@ -1,4 +1,4 @@
-const BLACKWOOD = {
+const PLACE_BLACKWOOD = {
 	city: 'novosibirsk',
 	title: 'Blackwood',
 	address: 'Красный проспект 20',
@@ -68,7 +68,4 @@ const BLACKWOOD = {
 	]
 }
 
-
-module.exports = {
-	BLACKWOOD: BLACKWOOD
-}
+export default PLACE_BLACKWOOD

@@ -1,4 +1,4 @@
-const MAKELOVEPIZZA = {
+const PLACE_MAKELOVEPIZZA = {
 	city: 'tomsk',
 	title: 'Make Love Pizza',
 	address: 'Ленина 20',
@@ -68,7 +68,4 @@ const MAKELOVEPIZZA = {
 	]
 }
 
-
-module.exports = {
-	MAKELOVEPIZZA: MAKELOVEPIZZA
-}
+export default PLACE_MAKELOVEPIZZA

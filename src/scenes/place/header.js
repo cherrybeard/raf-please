@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { getPlaceParam } from '../../storage/places.js';
 
 class PlaceHeader extends React.Component {
@@ -25,7 +26,6 @@ class PlaceHeader extends React.Component {
 			</header>
 		)
 	}
-
 }
 
-export default PlaceHeader;
+export default PlaceHeader
