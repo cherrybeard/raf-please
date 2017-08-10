@@ -13,8 +13,17 @@ $url-lato: '../fonts/lato'
 	font-weight: 400
 	font-style: normal
 
-%header-large
-	font-size: rem(72px)
+%header-large,
+%header-small
+	color: black
 	font-family: $font-secondary
 	text-transform: uppercase
-	color: black
+
+%header-large
+	font-size: rem(72px)
+
+%header-small
+	font-size: rem(24px)
+
+%header-smallest
+	letter-spacing: 0.2em

@@ -1,9 +1,11 @@
 %place-dishes
 	display: flex
-	justify-content: space-between
 
 	.dish
-		width: 290px
+		width: rem(290px)
+
+		&:not(:last-child)
+			margin-right: $sidebar-margin
 
 		img
 			max-width: 100%
@@ -12,7 +14,10 @@
 		@extend %header-small
 		margin:
 			top: 20px
-			bottom: 13px
+			bottom: 2px
 
-		.price
-			color: #aaa
+	.price
+		@extend %header-smallest
+		display: block
+		color: #888
+		margin-bottom: 10px

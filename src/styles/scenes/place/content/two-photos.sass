@@ -6,10 +6,11 @@
 		max-width: 100%
 
 	.two-photos-left
-		max-width: 500px
+		margin-right: $sidebar-margin
 
 	.two-photos-right
-		width: 440px
+		width: 40%
+		flex-shrink: 0
 
 	.photo
 		max-width: 100%
@@ -17,7 +18,9 @@
 	.description-top,
 	.description-left
 		max-width: 360px
-		margin-top: 35px
+		margin:
+			top: 35px
+			left: 18px
 
 	.description-top
 		@extend %photo-description-top

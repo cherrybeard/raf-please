@@ -14,7 +14,8 @@ class Dish extends React.Component {
 					<img src={this.photoUrl} alt={this.dish.title} />
 				</div>
 				<div className="description">
-					<h4 className="title">{this.dish.title}, <span className="price">{this.dish.price}</span></h4>
+					<h4 className="title">{this.dish.title}</h4>
+					<h5 className="price">{this.dish.price}</h5>
 					<p>{this.dish.text}</p>
 				</div>
 			</div>
