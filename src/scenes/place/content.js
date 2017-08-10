@@ -1,6 +1,8 @@
 import React from 'react';
 
+import { getPlaceParam } from '../../storage/places.js';
 import Mention from '../../components/mention.js';
+import Intro from './content/intro.js';
 import SidePhoto from './content/side-photo.js';
 
 class PlaceContent extends React.Component {
@@ -15,12 +17,12 @@ class PlaceContent extends React.Component {
 
 	render() {
 		var placeContent = this.content.map((block, index) => {
-			var blockContent, photoUrl, photoUrls;
+			var blockContent, photoUrl, photoUrls, tags;
 
 			switch (block.type) {
 				case 'intro':
-					var paragraphList = block.text.map((paragraphText, index) => { return <p key={index}>{paragraphText}</p> });
-					blockContent = <div key={index} className="intro">{paragraphList}</div>;
+					tags = getPlaceParam(this.props.place, 'tags');
+					blockContent = <Intro key={index} text={block.text} tags={tags} />;
 					break;
 
 				case 'left-photo':

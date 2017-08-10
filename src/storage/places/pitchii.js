@@ -9,7 +9,6 @@ const PITCHII = {
 	lastUpdate: '26 июля 2017',
 	gisLink: 'https://2gis.ru/novosibirsk/query/pitchii/firm/70000001020344543?queryState=center%2F82.903186%2C55.028797%2Fzoom%2F16',
 	tags: ['Кофе', 'Еда', 'Wi-fi', 'Розетки'],
-
 	dishes: [
 		{
 			title: 'Латте «Лемонграсс»',
@@ -30,7 +29,6 @@ const PITCHII = {
 			name: 'pastrami-waffles'
 		}
 	],
-
 	page: [
 		{
 			type: 'intro',

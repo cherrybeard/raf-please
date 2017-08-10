@@ -14,11 +14,6 @@ class Place extends React.Component {
 
 		this.name = this.props.match.params.name;
 		this.coverPhotoUrl = ASSETS_DIRECTORY + '/images/place/'+ this.name + "/cover.jpg";
-
-		const tags = this.getParam('tags');
-		this.tagList = tags.map((tag) =>
-			<span key={tag} className="tag">{tag}</span>
-		);
 	}
 
 	getParam(param) {
@@ -32,7 +27,6 @@ class Place extends React.Component {
 				<div className="place-cover-image" style={{ backgroundImage: `url(${this.coverPhotoUrl})` }}></div>
 				<PlaceHeader name={this.name} />
 				<article className="place-description">
-					<div className="tags">{this.tagList}</div>
 					<PlaceContent content={this.getParam('page')} place={this.name} />
 					<DishList dishes={this.getParam('dishes')} place={this.name} />
 				</article>
