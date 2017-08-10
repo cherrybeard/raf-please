@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Mention from '../../../components/mention.js';
+import Mention from 'components/mention.js';
 
 class SidePhoto extends React.Component {
 	constructor(props){

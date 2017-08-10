@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getPlaceParam } from '../../../storage/places.js';
+import { getPlaceParam } from 'storage/places.js';
 
 class Intro extends React.Component {
 	constructor(props){

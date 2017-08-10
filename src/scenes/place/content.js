@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { getPlaceParam } from '../../storage/places.js';
-import Mention from '../../components/mention.js';
+import { getPlaceParam } from 'storage/places.js';
+import Mention from 'components/mention.js';
 import Intro from './content/intro.js';
 import SidePhoto from './content/side-photo.js';
 

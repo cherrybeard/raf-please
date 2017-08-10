@@ -1,4 +1,4 @@
-const BARBQ = {
+const PLACE_BARBQ = {
 	city: 'novosibirsk',
 	title: 'Bar Bq',
 	address: 'Красный проспект 20',
@@ -70,7 +70,4 @@ const BARBQ = {
 	]
 }
 
-
-module.exports = {
-	BARBQ: BARBQ
-}
+export default PLACE_BARBQ

@@ -1,5 +1,5 @@
 import React from 'react';
-import PlacePreview from './place-preview.js';
+import PlacePreview from 'components/place-preview.js';
 
 class PlacePreviewList extends React.Component {
 	render() {
@@ -32,4 +32,4 @@ class PlacePreviewList extends React.Component {
 	}
 }
 
-module.exports = PlacePreviewList;
+export default PlacePreviewList

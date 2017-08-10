@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Dish from './dish-list/dish.js';
 
 class DishList extends React.Component {
@@ -12,4 +13,4 @@ class DishList extends React.Component {
 
 }
 
-module.exports = DishList;
+export default DishList

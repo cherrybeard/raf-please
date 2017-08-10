@@ -24,4 +24,4 @@ class Dish extends React.Component {
 
 }
 
-module.exports = Dish;
+export default Dish

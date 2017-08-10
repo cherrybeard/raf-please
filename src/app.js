@@ -7,10 +7,10 @@ import {
   Link
 } from 'react-router-dom';
 
-import ScrollToTop from './components/scroll-to-top.js';
-import Logo from './components/logo.js';
-import Place from './scenes/place.js';
-import Home from './scenes/home.js'
+import ScrollToTop from 'components/scroll-to-top.js';
+import Logo from 'components/logo.js';
+import Place from 'scenes/place.js';
+import Home from 'scenes/home.js'
 
 render(
   <Router basename={ROOT_DIRECTORY}>

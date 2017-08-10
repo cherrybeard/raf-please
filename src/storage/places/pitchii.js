@@ -1,4 +1,4 @@
-const PITCHII = {
+const PLACE_PITCHII = {
 	city: 'novosibirsk',
 	title: 'Pitchii',
 	address: 'Ленина 9',
@@ -80,7 +80,4 @@ const PITCHII = {
 	]
 }
 
-
-module.exports = {
-	PITCHII: PITCHII
-}
+export default PLACE_PITCHII

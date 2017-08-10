@@ -37,7 +37,4 @@ var getCityTitle = function(cityName) {
 	return getCityDictionary()[cityName].title
 }
 
-module.exports = {
-		getCityList: getCityList,
-		getCityTitle: getCityTitle
-}
+export { getCityList, getCityTitle }

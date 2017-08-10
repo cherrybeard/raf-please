@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getPlaceParam } from '../storage/places.js';
+
+import { getPlaceParam } from 'storage/places.js';
 
 class PlacePreview extends React.Component {
 	constructor(props){
@@ -24,4 +25,4 @@ class PlacePreview extends React.Component {
 	}
 }
 
-module.exports = PlacePreview;
+export default PlacePreview
